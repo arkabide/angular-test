@@ -1,3 +1,7 @@
-<p *ngFor="let person of persons, let i=index, let first=first, let last=last, let odd=odd, let even=even" [ngClass]="{first:first, last:last, even:even, odd:odd}">
+<p (click)="checkPerson(person)" *ngFor="let person of persons, let i=index, let first=first, let last=last, let odd=odd, let even=even" [ngClass]="{first:first, last:last, even:even, odd:odd}">
   {{i+1}}. {{person.surname}}, {{person.name}}. Age: {{person.age}}
+</p>
+
+<p *ngIf="selected" class="selected">
+  {{selected.surname}}, {{selected.name}}. Age: {{selected.age}}
 </p>

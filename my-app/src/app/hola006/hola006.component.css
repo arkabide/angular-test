@@ -13,3 +13,8 @@
 .odd {
   background: #fff;
 }
+
+.selected {
+  background: #444444;
+  color: white;
+}

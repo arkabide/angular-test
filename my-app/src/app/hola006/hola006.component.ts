@@ -9,6 +9,8 @@ import { Person } from '../model/Person'
 export class Hola006Component implements OnInit {
 
   persons: Person[] = [];
+  selected: Person;
+
   constructor() {
     for (let i = 0; i < 5; i++) {
       this.persons.push(new Person("Name-" + i, "Surname-" + i, i));
@@ -18,4 +20,7 @@ export class Hola006Component implements OnInit {
   ngOnInit() {
   }
 
+  checkPerson(person: Person) {
+    this.selected = person;
+  }
 }
