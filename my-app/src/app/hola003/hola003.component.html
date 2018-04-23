@@ -1,0 +1,13 @@
+<p class="blue">
+  text in blue
+</p>
+<p class="red">
+  text in red
+</p>
+
+<hr />
+
+<p [ngClass]="{'blue':active}">
+  text in blue (or not)
+</p>
+<input type="button" value="Revert" (click)="revert()" />

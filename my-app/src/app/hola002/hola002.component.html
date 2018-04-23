@@ -1,0 +1,25 @@
+<p>
+  <input type="button" value="Click here" (click)="alertCount()" />
+</p>
+
+<div class="ducks" *ngIf="getCounts().length > 0">
+  <img *ngFor="let i of getCounts()" src="assets/duck.png" />
+</div>
+
+<p>
+  Count: {{count}}
+  <input type="button" value="+" (click)="increment()" />
+  <input type="button" value="-" (click)="decrease()" />
+</p>
+
+<p>
+  Count: {{count}}
+  <input type="button" value="+" (click)="update(+1)" />
+  <input type="button" value="-" (click)="update(-1)" />
+</p>
+
+<p>
+  Count: {{count}}
+  <input type="button" value="+" (click)="count=count+1" />
+  <input type="button" value="-" (click)="count=count-1" />
+</p>
