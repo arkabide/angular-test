@@ -3,3 +3,8 @@
 img {
   width: 100px;
 }
+
+.selected {
+  background: #444444;
+  color: white;
+}

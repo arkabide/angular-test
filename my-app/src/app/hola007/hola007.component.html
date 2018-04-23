@@ -1,0 +1,9 @@
+<div>
+  <p *ngFor="let option of options" (click)="checked(option)">
+    <input type="radio" name="group" [value]="option" /> {{option}}
+  </p>
+
+  <p *ngIf="selected" class="selected">
+    {{selected}}
+  </p>
+</div>
