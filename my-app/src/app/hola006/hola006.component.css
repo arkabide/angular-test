@@ -1,0 +1,15 @@
+.first {
+  border-top: 2px solid #908f8f;
+}
+
+.last {
+  border-bottom: 2px solid #908f8f;
+}
+
+.even {
+  background: #dedede;
+}
+
+.odd {
+  background: #fff;
+}

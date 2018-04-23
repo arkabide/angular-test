@@ -10,7 +10,7 @@ export class Hola006Component implements OnInit {
 
   persons: Person[] = [];
   constructor() {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 5; i++) {
       this.persons.push(new Person("Name-" + i, "Surname-" + i, i));
     }
   }
