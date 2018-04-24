@@ -8,7 +8,7 @@ import { Person } from '../model/Person';
 })
 export class Hola011Component implements OnInit {
   persons: Person[] = [];
-  selected: Person[];
+  selected: Person[] = [];
 
   constructor() {
     for (let i = 0; i < 5; i++) {

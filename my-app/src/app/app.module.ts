@@ -13,6 +13,7 @@ import { Hola008Component } from './hola008/hola008.component';
 import { Hola009Component } from './hola009/hola009.component';
 import { Hola010Component } from './hola010/hola010.component';
 import { Hola011Component } from './hola011/hola011.component';
+import { Hola012Component } from './hola012/hola012.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { Hola011Component } from './hola011/hola011.component';
     Hola008Component,
     Hola009Component,
     Hola010Component,
-    Hola011Component
+    Hola011Component,
+    Hola012Component
   ],
   imports: [
     BrowserModule, FormsModule

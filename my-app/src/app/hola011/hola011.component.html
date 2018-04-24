@@ -1,9 +1,11 @@
 <p>
   <select name="selection" [(ngModel)]="selected" multiple>
     <option *ngFor="let person of persons" [ngValue]="person">{{person.surname}}, {{person.name}}</option>
-  </select> {{selected.surname}}, {{selected.name}}. Age: {{selected.age}}
+  </select>
 </p>
 
-<p *ngFor="let person of selected">
-  {{person.surname}}, {{person.name}}. Age: {{person.age}}
-</p>
+<div *ngIf="selected && selected.length > 0">
+  <p *ngFor="let person of selected">
+    {{person.surname}}, {{person.name}}. Age: {{person.age}}
+  </p>
+</div>
