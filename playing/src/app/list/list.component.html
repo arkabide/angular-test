@@ -1,0 +1,57 @@
+<div *ngIf="show==='table'">
+  <table>
+    <tr>
+      <th style="width:25%">
+        Author
+      </th>
+      <th style="width:25%">
+        Title
+      </th>
+      <th style="width:15%">
+        Pages
+      </th>
+      <th style="width:25%">
+        Category
+      </th>
+      <th>
+      </th>
+    </tr>
+    <tr *ngFor="let book of books; let i = index" (click)="edit(book)">
+      <td style="width:25%">
+        {{book.author}}
+      </td>
+      <td style="width:25%">
+        {{book.title}}
+      </td>
+      <td style="width:15%">
+        {{book.pages}}
+      </td>
+      <td style="width:25%">
+        {{book.category.desc}}
+      </td>
+      <td style="width:10%">
+        <span style="text-decoration:underline" (click)="remove(i)">Remove</span>
+      </td>
+    </tr>
+  </table>
+  <input type="button" value="add" (click)="showDiv('form')" />
+</div>
+
+<br/>
+<br/>
+
+<div *ngIf="show==='form'">
+  <form name="bookFrm">
+    <label>Title: </label><input type="text" name="title" [(ngModel)]="newBook.title" />
+    <label>Author: </label><input type="text" name="author" [(ngModel)]="newBook.author" />
+    <label>Pages: </label><input type="number" name="pages" [(ngModel)]="newBook.pages" />
+    <label>Category: </label>
+    <select [(ngModel)]="newBook.category" name="newBook.category">
+      <option *ngFor="let category of categories" [ngValue]="category" >
+        {{category.name}}
+      </option>
+    </select>
+
+    <input type="button" value="add" (click)="add()" />
+  </form>
+</div>
