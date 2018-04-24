@@ -1,0 +1,5 @@
+<p>
+  <select name="selection" [(ngModel)]="selected">
+    <option *ngFor="let str of strArr" [value]="str">{{str}}</option>
+  </select> {{selected}}
+</p>

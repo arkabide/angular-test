@@ -1,0 +1,5 @@
+<p>
+  <select name="selection" [(ngModel)]="selected">
+    <option *ngFor="let person of persons" [ngValue]="person">{{person.surname}}, {{person.name}}</option>
+  </select> {{selected.surname}}, {{selected.name}}. Age: {{selected.age}}
+</p>
